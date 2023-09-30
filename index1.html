@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Music Player</title>
+    <style>
+        /* Style for the play/pause button */
+        #playPauseBtn {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- SVG icons for play and pause -->
+        <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+        </svg>
+        <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" style="display: none;">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+        </svg>
+    </div>
+
+    <script>
+        const playIcon = document.getElementById("playIcon");
+        const pauseIcon = document.getElementById("pauseIcon");
+        const playPauseBtn = document.getElementById("playPauseBtn");
+
+        let isPlaying = false;
+
+        playPauseBtn.addEventListener("click", () => {
+            if (isPlaying) {
+                // Pause the music (change the icon to play)
+                pauseIcon.style.display = "none";
+                playIcon.style.display = "block";
+                // Add code to pause the audio here
+            } else {
+                // Play the music (change the icon to pause)
+                playIcon.style.display = "none";
+                pauseIcon.style.display = "block";
+                // Add code to play the audio here
+            }
+
+            // Toggle the play state
+            isPlaying = !isPlaying;
+        });
+    </script>
+</body>
+</html>

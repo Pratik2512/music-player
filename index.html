@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- <div class="container"> 
+        <div class="music-player">
+            <audio id="audio" controls>
+                <source src="song.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="controls">
+                <button id="play-pause">&#9658;</button>
+                <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5">
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <div class="img"><img src="" alt=""></div>
+        <div class="controls">
+            <img src="/responsive-music-player/prev.svg" alt="">
+           
+                <img class="pause" id="pause" src="/responsive-music-player/pause.svg" alt="">
+                <img  class="play" id="play" src="/responsive-music-player/play.svg" alt="">
+          
+            <img src="/responsive-music-player/next.svg" alt="">
+        </div>
+        <center><div class="text">Song.mp4</div></center>
+        <div id="audio"><audio class="audio" id="audio" src="/responsive-music-player/song.mp3" controls></audio></div>
+    </div>
+    <!-- <p>Made with 💖 by Pratik</p> -->
+    <script src="script.js"></script>
+</body>
+</html>
